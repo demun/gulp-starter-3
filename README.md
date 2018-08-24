@@ -2,4 +2,4 @@
 
 gulp starter
 
-html, sass, js, bower.
+html, sass, js, bower. gulp
