@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+    @@include('../partials/head/head.html', { "title": "bootstrap-breadcrumb", "path": "../.." })
+
+    <style>
+        /* .bd-content [class^=col] {
+            background-color: rgba(86, 61, 124, .15);
+            border: 1px solid rgba(86, 61, 124, .2);
+        }
+
+        .bd-content .row+.row {
+            margin-top: 1rem;
+        }
+
+        .bd-example-row-flex-cols .row {
+            min-height: 10rem;
+            background-color: rgba(255, 0, 0, .1);
+        } */
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 bd-content">
+
+                <h4>Breadcrumb</h4>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active" aria-current="page">Home</li>
+                    </ol>
+                </nav>
+
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Library</li>
+                    </ol>
+                </nav>
+
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Library</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Data</li>
+                    </ol>
+                </nav>
+
+                <br><br>
+                <p>구분기호 변경</p>
+
+                <pre>
+$breadcrumb-divider: quote(">");
+
+<!-- svg -->
+$breadcrumb-divider: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPjxwYXRoIGQ9Ik0yLjUgMEwxIDEuNSAzLjUgNCAxIDYuNSAyLjUgOGw0LTQtNC00eiIgZmlsbD0iY3VycmVudENvbG9yIi8+PC9zdmc+);
+
+<!-- 사용안할때 -->
+$breadcrumb-divider: none;
+                </pre>
+
+
+
+
+                <br><br>
+            </div>
+        </div>
+    </div>
+    <!-- bd-content -->
+
+    @@include('../partials/head/js.html', { "path": "../.." })
+</body>
+
+</html>

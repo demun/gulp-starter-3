@@ -1,0 +1,14 @@
+// 'styles' 디렉토리에 포함된 .css 또는 .scss 파일은 `gulp` 및 `gulp production` 중에 올바르게 컴파일 됩니다.
+
+// 변수
+@import 'basic/main';
+
+
+// 사용자 정의
+@import 'custom/main';
+
+
+// 협업
+@import 'person1/main';
+@import 'person2/main';
+@import 'person3/main';

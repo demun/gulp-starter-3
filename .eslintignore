@@ -1,0 +1,5 @@
+# ignore src external js folders
+/node_modules
+/src/js/vendor
+/src/js/lib
+/src/js/combine

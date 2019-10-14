@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+    @@include('../partials/head/head.html', { "title": "bootstrap-tooltips", "path": "../.." })
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 bd-content">
+
+
+                <h4>Tooltips</h4>
+                <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                    Tooltip on top
+                </button>
+                <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
+                    Tooltip on right
+                </button>
+                <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+                    Tooltip on bottom
+                </button>
+                <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+                    Tooltip on left
+                </button>
+
+                <br><br>
+                <h4>Disabled elements</h4>
+                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Disabled tooltip">
+                    <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled>Disabled button</button>
+                </span>
+
+                <br><br>
+
+
+                <br><br>
+            </div>
+        </div>
+    </div>
+    <!-- bd-content -->
+
+    @@include('../partials/head/js.html', { "path": "../.." })
+</body>
+
+</html>

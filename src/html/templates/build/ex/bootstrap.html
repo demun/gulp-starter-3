@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+    @@include('../partials/head/head.html', { "title": "bootstrap-tooltips", "path": "../.." })
+
+    <style>
+        .bd-example {
+            position: relative;
+            padding: 1rem;
+            margin: 1rem -15px 0;
+            border: solid #f8f9fa;
+            border-width: .2rem 0 0;
+        }
+
+        .bd-example::after {
+            display: block;
+            clear: both;
+            content: "";
+        }
+
+        .highlight {
+            padding: 1rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            background-color: #f8f9fa;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 bd-content">
+
+
+                <h4>Images</h4>
+                <div class="bd-example">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg img-fluid" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Responsive image">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Responsive image</text>
+                    </svg>
+                </div>
+                <figure class="highlight">
+                    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"img-fluid"</span> <span class="na">alt=</span><span class="s">"Responsive image"</span><span class="nt">&gt;</span></code></pre>
+                </figure>
+
+                <br><br>
+                <h4>Image thumbnails</h4>
+                <div class="bd-example bd-example-images">
+                    <svg class="bd-placeholder-img img-thumbnail" width="200" height="200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera: 200x200">
+                        <title>A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera</title>
+                        <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">200x200</text>
+                    </svg>
+                </div>
+                <figure class="highlight">
+                    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"img-thumbnail"</span><span class="nt">&gt;</span></code></pre>
+                </figure>
+
+                <br><br>
+                <h4>Aligning images</h4>
+                <div class="bd-example bd-example-images">
+                    <svg class="bd-placeholder-img rounded float-left" width="200" height="200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 200x200">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">200x200</text>
+                    </svg>
+                    <svg class="bd-placeholder-img rounded float-right" width="200" height="200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 200x200">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">200x200</text>
+                    </svg>
+                </div>
+                <figure class="highlight">
+                    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"rounded float-left"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"rounded float-right"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span></code></pre>
+                </figure>
+
+                <div class="bd-example bd-example-images">
+                    <svg class="bd-placeholder-img rounded mx-auto d-block" width="200" height="200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 200x200">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">200x200</text>
+                    </svg>
+                </div>
+                <figure class="highlight">
+                    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"rounded mx-auto d-block"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span></code></pre>
+                </figure>
+
+                <h4>Figures</h4>
+                <div class="bd-example">
+                    <figure class="figure">
+                        <svg class="bd-placeholder-img figure-img img-fluid rounded" width="400" height="300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 400x300">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">400x300</text>
+                        </svg>
+                        <figcaption class="figure-caption">A caption for the above image.</figcaption>
+                    </figure>
+                </div>
+                <figure class="highlight">
+                    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">"figure"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"figure-img img-fluid rounded"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;figcaption</span> <span class="na">class=</span><span class="s">"figure-caption"</span><span class="nt">&gt;</span>A caption for the above image.<span class="nt">&lt;/figcaption&gt;</span>
+                <span class="nt">&lt;/figure&gt;</span></code></pre>
+                </figure>
+
+
+                <br><br>
+            </div>
+        </div>
+    </div>
+    <!-- bd-content -->
+
+    @@include('../partials/head/js.html', { "path": "../.." })
+</body>
+
+</html>

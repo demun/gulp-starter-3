@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+    @@include('../partials/head/head.html', { "title": "selectbox", "path": "../.." })
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+                <h1>selectbox</h1>
+                <div class="selectbox">
+                    <label for="estimate_select1">평수</label>
+                    <select name="" id="estimate_select1" class="select">
+                        <option selected>18평</option>
+                        <option>28평</option>
+                        <option>38평</option>
+                        <option>48평</option>
+                    </select>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    @@include('../partials/head/js.html', { "path": "../.." })
+</body>
+
+</html>

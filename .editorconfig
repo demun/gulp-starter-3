@@ -1,0 +1,9 @@
+root = true
+
+[*]
+indent_style = space # 탭 또는 공백으로 설정하여 하드 탭 또는 소프트 탭을 각각 사용합니다.
+indent_size = 4 # 각 들여 쓰기 레벨에 사용되는 열 수와 소프트 탭의 너비 (지원되는 경우)를 정의하는 정수입니다. 탭으로 설정하면 tab_width (지정된 경우) 값이 사용됩니다.
+charset = utf-8
+trim_trailing_whitespace = true # 개행 문자 앞에 공백 문자를 제거하려면 true로 설정하고 그렇지 않으면 false로 설정하십시오.
+insert_final_newline = true # 파일을 저장할 때 줄 바꿈으로 끝나는지 확인하려면 true로 설정하고 그렇지 않으면 false로 설정하십시오.
+end_of_line = lf # lf, cr 또는 crlf로 설정하여 줄 바꿈이 표시되는 방식을 제어합니다.

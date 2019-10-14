@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+    @@include('../partials/head/head.html', { "title": "bootstrap-grid", "path": "../.." })
+
+    <style>
+        .bd-content [class^=col] {
+            background-color: rgba(86, 61, 124, .15);
+            border: 1px solid rgba(86, 61, 124, .2);
+        }
+
+        .bd-content .row+.row {
+            margin-top: 1rem;
+        }
+
+        .bd-example-row-flex-cols .row {
+            min-height: 10rem;
+            background-color: rgba(255, 0, 0, .1);
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 bd-content">
+
+                <h3>자동너비 col</h3>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            1 of 2
+                        </div>
+                        <div class="col">
+                            2 of 2
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            1 of 3
+                        </div>
+                        <div class="col">
+                            2 of 3
+                        </div>
+                        <div class="col">
+                            3 of 3
+                        </div>
+                    </div>
+                </div>
+
+                <br><br>
+                <h4>보통너비</h4>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            1 of 2
+                        </div>
+                        <div class="col">
+                            2 of 2
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            1 of 3
+                        </div>
+                        <div class="col">
+                            2 of 3
+                        </div>
+                        <div class="col">
+                            3 of 3
+                        </div>
+                    </div>
+                </div>
+
+
+                <br><br>
+                <h4>줄바꿈 박스</h4>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">Column</div>
+                        <div class="col">Column</div>
+                        <div class="w-100"></div>
+                        <div class="col">Column</div>
+                        <div class="col">Column</div>
+                    </div>
+                </div>
+
+                <br><br>
+                <h4>줄바꿈 박스</h4>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">col</div>
+                        <div class="col">col</div>
+                        <div class="col">col</div>
+                        <div class="col">col</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8">col-8</div>
+                        <div class="col-4">col-4</div>
+                    </div>
+                </div>
+
+                <br><br>
+                <h4>Gutters</h4>
+                <div class="container px-lg-5">
+                    <div class="row mx-lg-n5">
+                        <div class="col py-3 px-lg-5 border bg-light">Custom column padding</div>
+                        <div class="col py-3 px-lg-5 border bg-light">Custom column padding</div>
+                    </div>
+                </div>
+
+
+                <br><br>
+                <div class="bd-example-row-flex-cols">
+
+                    <h4>Vertical alignment</h4>
+                    <div class="container">
+                        <div class="row align-items-start">
+                            <div class="col">
+                                One of three columns
+                            </div>
+                            <div class="col">
+                                One of three columns
+                            </div>
+                            <div class="col">
+                                One of three columns
+                            </div>
+                        </div>
+
+                        <br><br>
+
+                        <div class="row align-items-center">
+                            <div class="col">
+                                One of three columns
+                            </div>
+                            <div class="col">
+                                One of three columns
+                            </div>
+                            <div class="col">
+                                One of three columns
+                            </div>
+                        </div>
+
+                        <br><br>
+
+                        <div class="row align-items-end">
+                            <div class="col">
+                                One of three columns
+                            </div>
+                            <div class="col">
+                                One of three columns
+                            </div>
+                            <div class="col">
+                                One of three columns
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <br><br>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col align-self-start">
+                                One of three columns
+                            </div>
+                            <div class="col align-self-center">
+                                One of three columns
+                            </div>
+                            <div class="col align-self-end">
+                                One of three columns
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <br><br>
+
+                <h4>Horizontal alignment</h4>
+                <div class="container">
+                    <div class="row justify-content-start">
+                        <div class="col-4">
+                            One of two columns
+                        </div>
+                        <div class="col-4">
+                            One of two columns
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-4">
+                            One of two columns
+                        </div>
+                        <div class="col-4">
+                            One of two columns
+                        </div>
+                    </div>
+                    <div class="row justify-content-end">
+                        <div class="col-4">
+                            One of two columns
+                        </div>
+                        <div class="col-4">
+                            One of two columns
+                        </div>
+                    </div>
+                    <div class="row justify-content-around">
+                        <div class="col-4">
+                            One of two columns
+                        </div>
+                        <div class="col-4">
+                            One of two columns
+                        </div>
+                    </div>
+                    <div class="row justify-content-between">
+                        <div class="col-4">
+                            One of two columns
+                        </div>
+                        <div class="col-4">
+                            One of two columns
+                        </div>
+                    </div>
+                </div>
+
+                <br><br>
+
+                <h4>Order classes</h4>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            First, but 순서가 없는
+                        </div>
+                        <div class="col order-12">
+                            Second, but 마지막
+                        </div>
+                        <div class="col order-1">
+                            Third, but 첫번째
+                        </div>
+                    </div>
+                </div>
+
+                <br><br>
+                <h4>Offset classes</h4>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">.col-md-4</div>
+                        <div class="col-md-4 offset-md-4">.col-md-4 .offset-md-4</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+                        <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 offset-md-3">.col-md-6 .offset-md-3</div>
+                    </div>
+                </div>
+
+                <br><br>
+                <h4>Margin utilities</h4>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">.col-md-4</div>
+                        <div class="col-md-4 ml-auto">.col-md-4 .ml-auto</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div>
+                        <div class="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-auto mr-auto">.col-auto .mr-auto</div>
+                        <div class="col-auto">.col-auto</div>
+                    </div>
+                </div>
+
+                <br><br>
+                <h4>Nesting</h4>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-9">
+                            Level 1: .col-sm-9
+                            <div class="row">
+                                <div class="col-8 col-sm-6">
+                                    Level 2: .col-8 .col-sm-6
+                                </div>
+                                <div class="col-4 col-sm-6">
+                                    Level 2: .col-4 .col-sm-6
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <br><br>
+            </div>
+        </div>
+    </div>
+    <!-- bd-content -->
+
+    @@include('../partials/head/js.html', { "path": "../.." })
+</body>
+
+</html>

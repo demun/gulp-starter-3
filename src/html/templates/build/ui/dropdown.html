@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+    @@include('../partials/head/head.html', { "title": "dropdown", "path": "../.." })
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+                <h1>dropdown</h1>
+
+                <div class="dropdown-wrap">
+                    <ul class="drop-list">
+                        <li>
+                            <a href="javascript:;" class="droplink down _droplink" data-link="chk_1">link 1</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="droplink down _droplink" data-link="chk_2">link 2</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="droplink down _droplink" data-link="chk_3">link 3</a>
+                        </li>
+                    </ul>
+                    <div class="dropdown-body" id="chk_1">
+                        <h3>dropdown-body 1</h3>
+                    </div>
+                    <div class="dropdown-body" id="chk_2">
+                        <h3>dropdown-body 2</h3>
+                    </div>
+                    <div class="dropdown-body" id="chk_3">
+                        <h3>dropdown-body 3</h3>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    @@include('../partials/head/js.html', { "path": "../.." })
+</body>
+
+</html>
