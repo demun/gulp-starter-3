@@ -17,11 +17,11 @@
         browserSync = require('browser-sync').create();
 
     /**
-     * Require gulp task from file
-     * @param  {string} taskName     Task name
-     * @param  {String} path         Path to task file
-     * @param  {Object} options      Options for task
-     * @param  {Array}  dependencies Task dependencies
+     * 파일에서 Gulp 작업 필요
+     * @param  {string} taskName     작업명
+     * @param  {String} path         작업 파일의 경로
+     * @param  {Object} options     작업 옵션
+     * @param  {Array}  dependencies 작업 의존성
      */
     function requireTask(taskName, path, options, dependencies) {
         let settings = options || {};
@@ -86,7 +86,7 @@
     });
 
     /**
-     * Build custom js
+     * 커스텀 js 빌드
      */
     requireTask(`${cfg.task.buildCustomJs}`, `./${cfg.folder.tasks}/`, {
         src: cfg.folder.src,
@@ -97,7 +97,7 @@
     });
 
     /**
-     * Build js vendor (concatenate vendors array)
+     * JS 벤더 구축 (공급 업체 배열로 연결)
      */
     requireTask(`${cfg.task.buildJsVendors}`, `./${cfg.folder.tasks}/`, {
         src: cfg.folder.src,
@@ -131,7 +131,6 @@
     });
 
     /**
-     * Build production styles for application from SASS
      * SASS에서 적용할 생산 스타일 구축
      */
     requireTask(`${cfg.task.buildSassProd}`, `./${cfg.folder.tasks}/`, {
@@ -144,7 +143,6 @@
     });
 
     /**
-     * Build styles for vendor from SASS
      * SASS 공급 업체를 위한 스타일 구축
      */
     requireTask(`${cfg.task.buildStylesVendors}`, `./${cfg.folder.tasks}/`, {
@@ -164,21 +162,21 @@
     });
 
     /**
-     * Clean image build directory
+     * 빌드 폴더에 이미지 비우기
      */
     requireTask(`${cfg.task.imageClean}`, `./${cfg.folder.tasks}/`, {
         src: cfg.folder.build
     });
 
     /**
-     * Clean build folder
+     * 빌드 폴더 비우기
      */
     requireTask(`${cfg.task.cleanBuild}`, `./${cfg.folder.tasks}/`, {
         src: cfg.folder.build
     });
 
     /**
-     * Clean production folder
+     * 프로덕션 폴더 비우기
      */
     requireTask(`${cfg.task.cleanProd}`, `./${cfg.folder.tasks}/`, {
         src: cfg.folder.prod
@@ -186,7 +184,7 @@
 
 
     /**
-     * Copy folders to the build folder
+     * 폴더를 빌드 폴더로 복사
      */
     requireTask(`${cfg.task.copyFolders}`, `./${cfg.folder.tasks}/`, {
         dest: cfg.folder.build,
@@ -194,7 +192,7 @@
     });
 
     /**
-     * Copy folders to the production folder
+     * 프로덕션 폴더로 폴더 복사
      */
     requireTask(`${cfg.task.copyFoldersProduction}`, `./${cfg.folder.tasks}/`, {
         dest: cfg.folder.prod,
@@ -202,7 +200,7 @@
     });
 
     /**
-     * Start browserSync server
+     * browserSync 서버 시작
      */
     requireTask(`${cfg.task.browserSync}`, `./${cfg.folder.tasks}/`, {
         mainHtml: cfg.file.mainHtml,
@@ -210,7 +208,7 @@
     });
 
     /**
-     * Watch for file changes
+     * 파일 변경 사항 감시
      */
     requireTask(`${cfg.task.watch}`, `./${cfg.folder.tasks}/`, {
         sassFilesInfo: cfg.getPathesForSassCompiling(),
@@ -234,7 +232,7 @@
     }, false);
 
     /**
-     * Default Gulp task
+     * 기본 Gulp 작업
      */
     gulp.task('default', gulp.series(
         cfg.task.cleanBuild,
@@ -259,7 +257,6 @@
     ));
 
     /**
-     * Dev Gulp task without usage of browserSync
      * browserSync를 사용하지 않는 Dev Gulp 작업
      */
     gulp.task('dev', gulp.series(
@@ -279,7 +276,6 @@
     ));
 
     /**
-     * Creating production folder without unnecessary files
      * 불필요한 파일없이 프로덕션 폴더 생성
      */
     gulp.task('production', gulp.series(
@@ -306,11 +302,10 @@
 
 
     /**
-     * Remove image(s) from build folder if corresponding images were deleted from source folder
      * 해당 이미지가 소스 폴더에서 삭제된 경우 빌드 폴더에서 이미지 제거
-     * @param  {Object} event    Event object
-     * @param  {String} src      Name of the source folder
-     * @param  {String} dest     Name of the destination folder
+     * @param  {Object} event    이벤트 객체
+     * @param  {String} src      소스 폴더의 이름
+     * @param  {String} dest     대상 폴더의 이름
      */
     function deleteFile(file, src, dest) {
         let fileName = file.path.toString().split('/').pop();
@@ -328,9 +323,9 @@
     }
 
     /**
-     * Show error in console
-     * @param  {String} preffix Title of the error
-     * @param  {String} err     Error message
+     * 콘솔에 오류 표시
+     * @param  {String} preffix 오류의 제목
+     * @param  {String} err     에러 메시지
      */
     function showError(preffix, err) {
         gutil.log(gutil.colors.white.bgRed(' ' + preffix + ' '), gutil.colors.white.bgBlue(' ' + err.message + ' '));

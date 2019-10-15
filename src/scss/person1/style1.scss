@@ -3,6 +3,9 @@
     color: rgb(180, 180, 125);
 }
 
+$var: #f30;
+
 h1 {
     font-size: 5vw;
+    color: $var;
 }

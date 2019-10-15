@@ -19,18 +19,20 @@ module.exports = function (options) {
             .pipe(sourcemaps.init({
                 loadMaps: true
             }))
-            .pipe(sass().on('error', function (err) {
+            .pipe(sass({
+                outputStyle: 'expanded' // compact
+            }).on('error', function (err) {
                 options.showError.apply(this, ['Sass compile error', err]);
             }))
             .pipe(autoprefixer(options.versions))
-            .pipe(sourcemaps.write('./'))
+            .pipe(gcmq()) // 미디어쿼리 후처리
             .pipe(gulp.dest(`./${options.dest}/css`))
 
             .pipe(rename(options.mainScssMin))
-            .pipe(gcmq())
             .pipe(cssnano({
                 safe: true
             }))
+            .pipe(sourcemaps.write('./'))
             .pipe(gulp.dest(`./${options.dest}/css`));
 
         // .pipe(sass().on('error', function(err) {

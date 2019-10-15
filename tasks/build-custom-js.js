@@ -17,26 +17,6 @@ const gulp = require('gulp'),
 module.exports = function (options) {
 
     return function () {
-        // return browserify({
-        //         // entries: `./${options.src}/js/combine/**/*.js`,
-        //         entries: `./${options.src}/js/${options.mainJs}`,
-        //         // Remove sourcemap for production
-        //         debug: !options.isProduction
-        //     })
-
-        //     // .transform('babelify', {
-        //     //     presets: ['es2015']
-        //     // })
-        //     .bundle().on('error', function (err) {
-        //         options.showError.apply(this, ['JS error', err])
-        //     })
-        //     .pipe(sourcemaps.init({
-        //         loadMaps: true,
-        //         debug: true
-        //     }))
-        //     .pipe(source('app.js'))
-        //     .pipe(sourcemaps.write("./"))
-        //     .pipe(gulp.dest(`./${options.dest}/js`));
 
         // return gulp.src(`./${options.src}/js/lib/*.js`)
         return gulp.src(`./${options.src}/js/combine/**/*.js`)
