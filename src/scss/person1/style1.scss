@@ -3,9 +3,29 @@
     color: rgb(180, 180, 125);
 }
 
-$var: #f30;
-
 h1 {
     font-size: 5vw;
-    color: $var;
+}
+
+.smoothScroll {
+    height: 100vh;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+
+    section {
+        padding: 10px;
+        height: 100%;
+        scroll-snap-align: start;
+        position: sticky;
+
+        &:nth-child(3n + 1) {
+            background: gold;
+        }
+        &:nth-child(3n + 2) {
+            background: skyblue;
+        }
+        &:nth-child(3n) {
+            background: pink;
+        }
+    }
 }
