@@ -1,7 +1,7 @@
 {
     "name": "gulp-starter-3",
     "version": "0.1.0",
-    "description": "Starter kit for markup projects",
+    "description": "Starter kit",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/demun/gulp-starter-3"

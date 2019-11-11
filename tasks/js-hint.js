@@ -1,14 +1,13 @@
 /**
  * Jshint ES
  */
-'use strict';
+"use strict";
 
-const gulp = require('gulp'),
-    jshint = require('gulp-jshint'),
-    stylish = require('jshint-stylish');
+const gulp = require("gulp"),
+    jshint = require("gulp-jshint"),
+    stylish = require("jshint-stylish");
 
-module.exports = function (options) {
-
+module.exports = function(options) {
     return cb => {
         gulp.src(`./${options.src}/js/combine/**/*.js`)
             .pipe(jshint())
@@ -16,5 +15,4 @@ module.exports = function (options) {
 
         cb();
     };
-
 };

@@ -1,22 +1,22 @@
 /**
  * Lint SASS
  */
-'use strict';
+"use strict";
 
-const gulp = require('gulp'),
-    sassLint = require('gulp-sass-lint');
+const gulp = require("gulp"),
+    sassLint = require("gulp-sass-lint");
 
-module.exports = function (options) {
-
+module.exports = function(options) {
     return cb => {
         gulp.src(`./${options.src}/scss/**`)
-            .pipe(sassLint({
-                configFile: './sass-lint.yml'
-            }))
+            .pipe(
+                sassLint({
+                    configFile: "./sass-lint.yml"
+                })
+            )
             .pipe(sassLint.format())
             .pipe(sassLint.failOnError());
 
         cb();
     };
-
 };
