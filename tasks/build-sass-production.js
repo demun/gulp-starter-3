@@ -1,5 +1,5 @@
 /**
- * Build production styles for application from SASS
+ * SASS에서 적용할 생산 스타일 구축
  */
 'use strict';
 

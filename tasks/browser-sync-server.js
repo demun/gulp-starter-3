@@ -1,13 +1,12 @@
 /**
- * Start browserSync server
+ * browserSync 서버 시작
  */
-'use strict';
+"use strict";
 
-const gulp = require('gulp'),
-    fs = require('fs');
+const gulp = require("gulp"),
+    fs = require("fs");
 
-module.exports = function (options) {
-
+module.exports = function(options) {
     return () => {
         // index.html이 존재하면 - 그것을 연다. 그렇지 않으면 폴더를 보여준다.
         let listDirectory = fs.existsSync(options.mainHtml) ? false : true;
@@ -19,7 +18,7 @@ module.exports = function (options) {
                 directory: listDirectory
             },
             snippetOptions: {
-                // Provide a custom Regex for inserting the snippet
+                // 스니펫 삽입을위한 사용자 정의 정규식 제공
                 rule: {
                     match: /$/i,
                     fn: (snippet, match) => snippet + match
@@ -28,5 +27,4 @@ module.exports = function (options) {
             port: 8080
         });
     };
-
 };
